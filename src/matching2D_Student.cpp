@@ -84,7 +84,7 @@ void descKeypoints(vector<cv::KeyPoint> &keypoints, cv::Mat &img,
   } else if (descriptorType.compare("SIFT") == 0) {
     extractor = cv::SIFT::create();
   } else {
-    cout << "Internal error: Unknown descriptor type: " + descriptorType
+    cout << "Error: Unknown descriptor type: " + descriptorType
          << endl;
     exit(1);
   }
@@ -233,8 +233,8 @@ void detKeypointsModern(vector<cv::KeyPoint> &keypoints, cv::Mat &img,
   double t = (double)cv::getTickCount();
   detector->detect(img, keypoints);
   t = ((double)cv::getTickCount() - t) / cv::getTickFrequency();
-  cout << detectorType << " detection with n=" << keypoints.size() << " keypoints in "
-       << 1000 * t / 1.0 << " ms" << endl;
+  cout << detectorType << " detection with n=" << keypoints.size()
+       << " keypoints in " << 1000 * t / 1.0 << " ms" << endl;
 
   if (bVis) {
     // visualize keypoints

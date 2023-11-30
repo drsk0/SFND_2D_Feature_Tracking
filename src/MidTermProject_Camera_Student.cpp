@@ -121,7 +121,6 @@ int main(int argc, const char *argv[]) {
     //// TASK MP.3 -> only keep keypoints on the preceding vehicle
 
     // only keep keypoints on the preceding vehicle
-    // TODO (drsk) discuss filtering in report.
     bool bFocusOnVehicle = true;
     cv::Rect vehicleRect(535, 180, 180, 150);
     if (bFocusOnVehicle) {
