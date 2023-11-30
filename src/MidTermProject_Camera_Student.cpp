@@ -26,7 +26,7 @@ using namespace std;
 int main(int argc, const char *argv[]) {
 
   if (argc != 6) {
-    cout << "Usage: 2d_feature_tracking <detector algo> <descriptor alog> "
+    cout << "Usage: 2d_feature_tracking <detector algo> <descriptor algo> "
             "<matching algo> <descriptor type> <selector type>"
          << endl
          << endl;
